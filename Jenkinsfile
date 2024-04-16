@@ -6,11 +6,6 @@ pipeline {
                 build job: 'build-web-application'
             }
         }
-        stage('Deploy to Staging Environment'){
-            steps{
-                build job: 'Deploy-Application-Staging-Environment'
-            }            
-        }
         stage('Deploy to Production Environment'){
             steps{
                 timeout(time:5, unit:'DAYS'){
